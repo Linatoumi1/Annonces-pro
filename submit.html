@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annonces Pro - Publier une annonce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Annonces Pro</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="submit.html" class="active"><i class="fas fa-plus-circle"></i> Publier une annonce</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Rechercher</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Mon compte</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-plus-circle"></i> Publier une nouvelle annonce</h1>
+            <p>Remplissez le formulaire ci-dessous pour créer votre annonce professionnelle</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <form id="announcementForm">
+                    <!-- Form Steps Indicator -->
+                    <div class="form-steps">
+                        <div class="step active">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Informations de base</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Détails de l'annonce</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Contact et publication</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Basic Information -->
+                    <div class="form-step active" id="step1">
+                        <h2><i class="fas fa-info-circle"></i> Informations de base</h2>
+                        
+                        <div class="form-group">
+                            <label for="title">Titre de l'annonce *</label>
+                            <input type="text" id="title" name="title" placeholder="Ex: Développeur Full Stack React/Node.js" required>
+                            <small>Un titre clair et descriptif attirera plus d'attention</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Catégorie *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Sélectionnez une catégorie</option>
+                                <option value="emploi">Emploi</option>
+                                <option value="immobilier">Immobilier</option>
+                                <option value="vehicules">Véhicules</option>
+                                <option value="services">Services</option>
+                                <option value="materiel">Matériel professionnel</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Nom de l'entreprise *</label>
+                            <input type="text" id="company" name="company" placeholder="Ex: TechSolutions Inc." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Localisation *</label>
+                            <input type="text" id="location" name="location" placeholder="Ex: Paris (75)" required>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-primary next-step" data-next="step2">
+                                Suivant <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Details -->
+                    <div class="form-step" id="step2">
+                        <h2><i class="fas fa-align-left"></i> Détails de l'annonce</h2>
+                        
+                        <div class="form-group">
+                            <label for="description">Description détaillée *</label>
+                            <textarea id="description" name="description" rows="6" placeholder="Décrivez en détail votre annonce..." required></textarea>
+                            <small>Incluez toutes les informations pertinentes: spécifications, conditions, avantages, etc.</small>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price">Prix / Rémunération *</label>
+                                <input type="text" id="price" name="price" placeholder="Ex: 65 000€/an ou 1 200€/mois" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="type">Type d'annonce</label>
+                                <select id="type" name="type">
+                                    <option value="">Type d'offre</option>
+                                    <option value="vente">À vendre</option>
+                                    <option value="location">À louer</option>
+                                    <option value="recherche">Recherche</option>
+                                    <option value="emploi">Offre d'emploi</option>
+                                    <option value="service">Service</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tags">Mots-clés (séparés par des virgules)</label>
+                            <input type="text" id="tags" name="tags" placeholder="Ex: développement, react, node, fullstack">
+                            <small>Ces mots-clés aideront les utilisateurs à trouver votre annonce</small>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="step1">
+                                <i class="fas fa-arrow-left"></i> Précédent
+                            </button>
+                            <button type="button" class="btn btn-primary next-step" data-next="step3">
+                                Suivant <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact & Publication -->
+                    <div class="form-step" id="step3">
+                        <h2><i class="fas fa-user"></i> Contact et publication</h2>
+                        
+                        <div class="form-group">
+                            <label for="contactName">Nom du contact *</label>
+                            <input type="text" id="contactName" name="contactName" placeholder="Ex: Jean Dupont" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="exemple@entreprise.fr" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="01 23 45 67 89">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="website">Site web</label>
+                            <input type="url" id="website" name="website" placeholder="https://www.entreprise.fr">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="images">Images (optionnel)</label>
+                            <div class="file-upload">
+                                <input type="file" id="images" name="images" accept="image/*" multiple>
+                                <label for="images" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choisir des fichiers</span>
+                                </label>
+                                <small>Ajoutez jusqu'à 5 images (max 2MB chacune)</small>
+                            </div>
+                            <div id="file-list" class="file-list"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">J'accepte les <a href="#">conditions d'utilisation</a> et confirme que mon annonce respecte les règles de la plateforme *</label>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="step2">
+                                <i class="fas fa-arrow-left"></i> Précédent
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Publier l'annonce
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Success Message (hidden by default) -->
+                <div id="successMessage" class="success-message">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Annonce publiée avec succès !</h2>
+                    <p>Votre annonce a été enregistrée et sera visible dans les prochaines minutes.</p>
+                    <div class="success-actions">
+                        <a href="index.html" class="btn btn-primary">
+                            <i class="fas fa-home"></i> Retour à l'accueil
+                        </a>
+                        <a href="submit.html" class="btn btn-outline">
+                            <i class="fas fa-plus-circle"></i> Publier une autre annonce
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar with tips -->
+            <aside class="form-sidebar">
+                <div class="sidebar-card">
+                    <h3><i class="fas fa-lightbulb"></i> Conseils pour une bonne annonce</h3>
+                    <ul class="tips-list">
+                        <li><strong>Titre clair et précis</strong> : Incluez les informations essentielles dès le titre</li>
+                        <li><strong>Description détaillée</strong> : Expliquez bien ce que vous proposez ou recherchez</li>
+                        <li><strong>Photos de qualité</strong> : Des images nettes augmentent l'engagement de 40%</li>
+                        <li><strong>Prix compétitif</strong> : Comparez avec les annonces similaires</li>
+                        <li><strong>Contact facile</strong> : Vérifiez vos coordonnées avant publication</li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-card">
+                    <h3><i class="fas fa-question-circle"></i> Questions fréquentes</h3>
+                    <div class="faq-item">
+                        <h4>Combien coûte la publication ?</h4>
+                        <p>La publication d'annonces est entièrement gratuite sur Annonces Pro.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Combien de temps reste mon annonce ?</h4>
+                        <p>Les annonces sont visibles pendant 30 jours. Vous pouvez les renouveler gratuitement.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Puis-je modifier mon annonce après publication ?</h4>
+                        <p>Oui, vous pouvez éditer votre annonce à tout moment depuis votre compte.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-bullhorn"></i> Annonces Pro</h3>
+                    <p>La plateforme de petites annonces professionnelles gratuites. Trouvez des opportunités ou proposez vos services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#">Emploi</a></li>
+                        <li><a href="#">Immobilier</a></li>
+                        <li><a href="#">Véhicules</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Matériel pro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="submit.html">Publier une annonce</a></li>
+                        <li><a href="#">Comment ça marche</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@annoncespro.fr</li>
+                        <li><i class="fas fa-phone"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue des Affaires, 75000 Paris</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Annonces Pro. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

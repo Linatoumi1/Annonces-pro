@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annonces Pro - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Annonces Pro</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="submit.html"><i class="fas fa-plus-circle"></i> Publier une annonce</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Rechercher</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Mon compte</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Trouvez et proposez des opportunités professionnelles</h1>
+                <p>Plateforme de petites annonces gratuites pour professionnels et entreprises</p>
+                <a href="submit.html" class="btn btn-primary">Publier une annonce <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">245</span>
+                    <span class="stat-label">Annonces actives</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">127</span>
+                    <span class="stat-label">Entreprises</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Catégories</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Filters -->
+            <div class="filters">
+                <h2><i class="fas fa-filter"></i> Filtrer les annonces</h2>
+                <div class="filter-options">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">Toutes les catégories</option>
+                        <option value="emploi">Emploi</option>
+                        <option value="immobilier">Immobilier</option>
+                        <option value="vehicules">Véhicules</option>
+                        <option value="services">Services</option>
+                        <option value="materiel">Matériel professionnel</option>
+                    </select>
+                    <select id="priceFilter" class="filter-select">
+                        <option value="">Tous les prix</option>
+                        <option value="0-500">Moins de 500€</option>
+                        <option value="500-2000">500€ - 2000€</option>
+                        <option value="2000+">Plus de 2000€</option>
+                    </select>
+                    <button class="btn btn-outline" id="applyFilters">
+                        <i class="fas fa-check"></i> Appliquer
+                    </button>
+                    <button class="btn btn-text" id="resetFilters">
+                        <i class="fas fa-redo"></i> Réinitialiser
+                    </button>
+                </div>
+            </div>
+
+            <!-- Announcements List -->
+            <section class="announcements">
+                <h2><i class="fas fa-list"></i> Annonces récentes</h2>
+                <div class="announcements-grid">
+                    <!-- Announcement 1 -->
+                    <article class="announcement-card">
+                        <div class="announcement-category category-emploi">Emploi</div>
+                        <div class="announcement-header">
+                            <h3>Développeur Full Stack React/Node.js</h3>
+                            <span class="announcement-price">65 000€/an</span>
+                        </div>
+                        <div class="announcement-company">
+                            <i class="fas fa-building"></i>
+                            <span>TechSolutions Inc.</span>
+                        </div>
+                        <p class="announcement-description">Nous recherchons un développeur full stack expérimenté pour rejoindre notre équipe de développement produit. CDI avec télétravail partiel possible.</p>
+                        <div class="announcement-footer">
+                            <div class="announcement-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Paris (75)</span>
+                            </div>
+                            <div class="announcement-date">
+                                <i class="far fa-clock"></i>
+                                <span>Il y a 2 jours</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Announcement 2 -->
+                    <article class="announcement-card">
+                        <div class="announcement-category category-immobilier">Immobilier</div>
+                        <div class="announcement-header">
+                            <h3>Bureau 50m² en centre-ville</h3>
+                            <span class="announcement-price">1 200€/mois</span>
+                        </div>
+                        <div class="announcement-company">
+                            <i class="fas fa-building"></i>
+                            <span>ImmoPro</span>
+                        </div>
+                        <p class="announcement-description">Bureau lumineux de 50m², entièrement rénové, situé au cœur du quartier des affaires. Idéal pour professionnel ou petite entreprise.</p>
+                        <div class="announcement-footer">
+                            <div class="announcement-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Lyon (69)</span>
+                            </div>
+                            <div class="announcement-date">
+                                <i class="far fa-clock"></i>
+                                <span>Il y a 3 jours</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Announcement 3 -->
+                    <article class="announcement-card">
+                        <div class="announcement-category category-vehicules">Véhicules</div>
+                        <div class="announcement-header">
+                            <h3>Voiture utilitaire Renault Master</h3>
+                            <span class="announcement-price">28 500€</span>
+                        </div>
+                        <div class="announcement-company">
+                            <i class="fas fa-building"></i>
+                            <span>Transports Rapides</span>
+                        </div>
+                        <p class="announcement-description">Renault Master 2020, 50 000 km, excellent état. Aménagé pour transport de marchandises. Contrôle technique récent.</p>
+                        <div class="announcement-footer">
+                            <div class="announcement-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Marseille (13)</span>
+                            </div>
+                            <div class="announcement-date">
+                                <i class="far fa-clock"></i>
+                                <span>Il y a 5 jours</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Announcement 4 -->
+                    <article class="announcement-card">
+                        <div class="announcement-category category-services">Services</div>
+                        <div class="announcement-header">
+                            <h3>Comptabilité pour petites entreprises</h3>
+                            <span class="announcement-price">À partir de 200€/mois</span>
+                        </div>
+                        <div class="announcement-company">
+                            <i class="fas fa-building"></i>
+                            <span>ExpertCompta SAS</span>
+                        </div>
+                        <p class="announcement-description">Service de comptabilité complet pour PME et indépendants. Déclarations fiscales, paie, conseil. Premier mois gratuit.</p>
+                        <div class="announcement-footer">
+                            <div class="announcement-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bordeaux (33)</span>
+                            </div>
+                            <div class="announcement-date">
+                                <i class="far fa-clock"></i>
+                                <span>Il y a 1 semaine</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Announcement 5 -->
+                    <article class="announcement-card">
+                        <div class="announcement-category category-materiel">Matériel</div>
+                        <div class="announcement-header">
+                            <h3>Photocopieur professionnel multifonction</h3>
+                            <span class="announcement-price">2 800€</span>
+                        </div>
+                        <div class="announcement-company">
+                            <i class="fas fa-building"></i>
+                            <span>BureauTech</span>
+                        </div>
+                        <p class="announcement-description">Photocopieur couleur haute capacité, impression recto-verso, scanner et fax intégrés. Garantie 2 ans.</p>
+                        <div class="announcement-footer">
+                            <div class="announcement-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Toulouse (31)</span>
+                            </div>
+                            <div class="announcement-date">
+                                <i class="far fa-clock"></i>
+                                <span>Il y a 1 semaine</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Announcement 6 -->
+                    <article class="announcement-card">
+                        <div class="announcement-category category-emploi">Emploi</div>
+                        <div class="announcement-header">
+                            <h3>Commercial B2B secteur numérique</h3>
+                            <span class="announcement-price">45 000€ + commissions</span>
+                        </div>
+                        <div class="announcement-company">
+                            <i class="fas fa-building"></i>
+                            <span>Digital Growth Agency</span>
+                        </div>
+                        <p class="announcement-description">Nous cherchons un commercial expérimenté pour développer notre portefeuille clients dans le secteur des services numériques.</p>
+                        <div class="announcement-footer">
+                            <div class="announcement-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Lille (59)</span>
+                            </div>
+                            <div class="announcement-date">
+                                <i class="far fa-clock"></i>
+                                <span>Il y a 2 semaines</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <span class="page-link disabled">...</span>
+                <a href="#" class="page-link">10</a>
+                <a href="#" class="page-link next">
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-bullhorn"></i> Annonces Pro</h3>
+                    <p>La plateforme de petites annonces professionnelles gratuites. Trouvez des opportunités ou proposez vos services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#">Emploi</a></li>
+                        <li><a href="#">Immobilier</a></li>
+                        <li><a href="#">Véhicules</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Matériel pro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="submit.html">Publier une annonce</a></li>
+                        <li><a href="#">Comment ça marche</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@annoncespro.fr</li>
+                        <li><i class="fas fa-phone"></i> 01 23 45 67 89</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue des Affaires, 75000 Paris</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Annonces Pro. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
